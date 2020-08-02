@@ -1,15 +1,15 @@
-var first = prompt("Enter first number");
+const first = prompt("Enter first number");
 if (isNaN(first) === true) {
   alert("That is not a number");
 } else {
-  var second = prompt("Enter second number");
+  const second = prompt("Enter second number");
   if (isNaN(second) === true) {
     alert("That is not a number");
   } else {
-    var operator = prompt("Enter operator (ie +, -, *, /, %)");
+    const operator = prompt("Enter operator (ie +, -, *, /, %)");
     if (operator === "+" || operator === "-" || operator === "*" || operator === "/" || operator === "%") {
-      var total = eval(first + operator + second);
-      var sum = alert("The sum is: " + total);
+      let total = eval(first + operator + second);
+      alert(first + " " + operator + " " + second + " = " + total);
     } else {
       alert("You didn't enter a valid operator");
     }
