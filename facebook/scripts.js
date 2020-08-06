@@ -1,19 +1,30 @@
-console.log("hello");
+var database = [
+  {
+    username: "Andrei",
+    password: "supersecret"
+  }
+];
 
-let database = [{
-  username: "Mike",
-  password: "Indie",
-}];
+var newsfeed = [
+  {
+    username: "Boddy",
+    timeline: "So tired from all that learning"
+  },
+  {
+    username: "Sally",
+    timeline: "Javascript is so cool"
+  }
+];
 
-let newsfeed = [{
-  username: "Mike",
-  timeline: "Yesterday"
-}, {
-  username: "Mike",
-  timeline: "Today"
-}, {
-  username: "Mike",
-  timeline: "Tomorrow"
-}];
+var userNamePrompt = prompt("Whats your username?");
+var passwordPrompt = prompt("Whats your password?");
 
-console.log(database, newsfeed)
+function signIn(user, pass) {
+  if (user === database[0].username && pass === database[0].password) {
+    console.log(newsfeed);
+  } else {
+    console.log("Sorry wrong username or password");
+  }
+}
+
+signIn(userNamePrompt, passwordPrompt);
