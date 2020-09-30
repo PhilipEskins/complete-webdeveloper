@@ -40,6 +40,7 @@ function addClick() {
 
 //function to toggle the class done on each item
 function complete(item) {
+  item.insertAdjacentHTML("beforeend", " <button type='delete' class='delete'>Delete</button>");
   item.addEventListener("click", (e) => e.target.classList.toggle("done"));
 }
 
